@@ -12,8 +12,10 @@ const helmet = require('helmet');
 app.use(helmet());
 
 const gameRoutes = require('./routes/games');
+const userRoutes = require('./routes/users');
 
 app.use('/games', gameRoutes);
+app.use('/users', userRoutes);
 
 /* 404 handler */
 app.use((req, res, next) => {

@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const PORT = +process.env.PORT || 3001;
+const SECRET = process.env.SECRET || 'secret';
 
 if (process.env.NODE_ENV === 'test') {
 	DB_URI = 'thirty_one_test';
@@ -10,4 +11,4 @@ if (process.env.NODE_ENV === 'test') {
 
 console.log('Using database', DB_URI);
 
-module.exports = { PORT, DB_URI };
+module.exports = { PORT, DB_URI, SECRET };
